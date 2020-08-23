@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Love Calculator</title>
+		<link rel="stylesheet" href="css/style.css"></link>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-sm-6 mx-auto">
+				<div class="card">
+					<div class="card-header bg-danger text-light text-center">LOVE CALCULATOR</div>
+					<div class="card-body text-center">
+					<input type="text" placeholder="Your Name" class="text-center" id="name1"> + <input type="text" placeholder="Love Name" class="text-center" id="name2"><br><br>
+					<button class="btn btn-success w-50" onclick="func()" type="submit">Click</button>
+					<br><br><input type="text" class="text-center" id="per" placeholder="LOVE PERCENTAGE" disabled>
+					</div>
+					<div class="card-footer text-center">God bless your relationship</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function func()
+		{
+			var name1 = document.getElementById("name1").value;
+			var name2 = document.getElementById("name2").value;
+			if(name1=="" || name2=="")
+			{
+				alert("Please enter names first!");
+			}
+			else
+			{
+				if(name1.length<3 || name2.length<3)
+				{
+					alert("Minimum length is 3");
+				}
+				else if(!isNaN(name1) || !isNaN(name2))
+				{
+					alert("Numbers are not allowed!");
+				}
+				else
+				{
+					var percent = Math.floor(Math.random() * 100);
+					document.getElementById("per").value = percent + "%";
+				}
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,15 @@
+body
+{
+	background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../images/lc.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	width:100%;
+}
+
+.card
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,60%);
+}
